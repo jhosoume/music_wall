@@ -1,0 +1,14 @@
+<h1>Songs</h1>
+
+<% @songs.each do |song| %>
+  <div class="song">
+    <% if song.url %>
+      <h3><a href=<%= song.url %>><%= song.title %></a></h3>
+    <% else %>
+      <h3><%= song.title %></h3>
+    <% end %>
+    <p>
+      Author: <%= song.author %>
+    </p>
+  </div>
+<% end %>
