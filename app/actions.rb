@@ -9,11 +9,11 @@ get '/songs' do
 end 
 
 get '/songs/new' do
-  erb :'/songs/new/index'
+  erb :'/songs/new'
 end
 
 post '/songs' do
-  @song = @Song.new(
+  @song = Song.new(
     title: params[:title],
     author: params[:author],
     url: params[:url]
